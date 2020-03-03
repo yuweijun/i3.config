@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode neovim chromium
+sudo pacman -S i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode neovim chromium ttf-dejavu ttf-dejavu-sans-mono-powerline
 
 ln -sfn .profile ~/.profile
 ln -sfn .Xresources ~/.Xresources
