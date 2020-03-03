@@ -11,7 +11,6 @@ floating_modifier $mod
 bindsym $mod+Return exec terminal
 bindsym $mod+Shift+w kill
 
-bindsym $mod+a focus parent
 bindsym $mod+b exec chromium
 bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -21,6 +20,7 @@ bindsym $mod+Ctrl+m bar mode toggle
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+bindsym $mod+Shift+f fullscreen toggle
 bindsym $mod+Shift+m exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -37,7 +37,6 @@ bindsym $mod+Ctrl+l move right
 bindsym $mod+Ctrl+s split h;exec notify-send 'tile horizontally'
 bindsym $mod+Ctrl+v split v;exec notify-send 'tile vertically'
 bindsym $mod+Ctrl+q split toggle
-bindsym $mod+Ctrl+f fullscreen toggle
 bindsym $mod+Ctrl+e layout toggle split
 
 bindsym $mod+Ctrl+Right workspace next
