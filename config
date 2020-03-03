@@ -12,9 +12,7 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+w kill
 
 bindsym $mod+b exec chromium
-# bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec dmenu_run -b -nb '#697C7F' -sb '#455A64' -sf '#81C784' -fn 'pango:Inconsolata 10'
-bindsym $mod+z exec --no-startup-id morc_menu
+bindsym $mod+d exec dmenu_run -b -h 24 -nf '#eeeeee' -nb '#333333' -sf '#ffffff' -sb '#0088CC' -fn 'pango:DejaVu Sans Mono'
 
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+Ctrl+m bar mode toggle
@@ -23,7 +21,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+f fullscreen toggle
 bindsym $mod+Shift+m exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+Shift+h focus left
 bindsym $mod+Shift+j focus down
