@@ -93,7 +93,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 30 -locker blurlock
-exec --no-startup-id xrandr --output Virtual1 --primary --mode 1680x1050
+exec --no-startup-id xrandr --output Virtual1 --primary --mode 2560x1600
 exec_always --no-startup-id fix_xcursor
 
 set_from_resource $term_background background
@@ -119,7 +119,7 @@ bar {
     i3bar_command i3bar -t
     font pango:DejaVu Sans Mono
     position bottom
-    status_command ~/bin/i3status-rs ~/.i3/status.toml
+    status_command ~/.i3/i3status-rs ~/.i3/status.toml
     colors {
         separator #666666
         background #0000006f
