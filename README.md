@@ -2,7 +2,7 @@
 
 ## preconditions
 
-$> sudo pacman -S i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode neovim chromium
+$ sudo pacman -S --noconfirm i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode neovim chromium ttf-dejavu ttf-dejavu-sans-mono-powerline
 
 install i3status-rust from [https://github.com/greshake/i3status-rust/](https://github.com/greshake/i3status-rust/), and then:
 
