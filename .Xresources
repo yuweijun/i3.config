@@ -68,12 +68,13 @@ URxvt*letterSpace:                0
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
+! URxvt*background:               black
+! URxvt.background:               [100]#222D31
+URxvt*background:                 rgba:0000/0000/0000/cccc
 URxvt.depth:                      32
-URxvt.background:                 [100]#222D31
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 black
 URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
