@@ -2,7 +2,7 @@
 
 ## preconditions
 
-$> sudo pacman -S i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode
+$> sudo pacman -S i3-gaps picom conky xorg-xrdb xorg-xrandr i3status-manjaro rxvt-unicode neovim chromium
 
 install i3status-rust from [https://github.com/greshake/i3status-rust/](https://github.com/greshake/i3status-rust/), and then:
 
