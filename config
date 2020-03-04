@@ -122,7 +122,7 @@ bar {
     i3bar_command i3bar -t
     font pango:DejaVu Sans Mono
     position bottom
-    status_command ~/bin/i3status-rs ~/.i3/status.toml
+    status_command ~/.i3/i3status-rs ~/.i3/status.toml
     colors {
         separator  #666666
         background #0000006f
