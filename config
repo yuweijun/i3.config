@@ -3,9 +3,9 @@ set $mod Mod4
 default_border pixel 1
 default_floating_border normal
 
-hide_edge_borders none
-
 font xft:URWGothic-Book 11
+
+hide_edge_borders none
 floating_modifier $mod
 
 bindsym $mod+Return exec terminal
@@ -15,13 +15,17 @@ bindsym $mod+b exec chromium
 bindsym $mod+d exec dmenu_run -b -h 24 -nf '#eeeeee' -nb '#333333' -sf '#ffffff' -sb '#0088CC' -fn 'pango:DejaVu Sans Mono'
 
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+Ctrl+m bar mode toggle
+bindsym $mod+Ctrl+m bar  mode     toggle
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+f fullscreen toggle
+
+bindsym $mod+Shift+s split h;exec notify-send 'tile horizontally'
+bindsym $mod+Shift+v split v;exec notify-send 'tile vertically'
+
 bindsym $mod+Shift+m exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
 bindsym $mod+Shift+h focus left
 bindsym $mod+Shift+j focus down
@@ -33,18 +37,17 @@ bindsym $mod+Ctrl+j move down
 bindsym $mod+Ctrl+k move up
 bindsym $mod+Ctrl+l move right
 
-bindsym $mod+Ctrl+s split h;exec notify-send 'tile horizontally'
-bindsym $mod+Ctrl+v split v;exec notify-send 'tile vertically'
-bindsym $mod+Ctrl+q split toggle
-bindsym $mod+Ctrl+e layout toggle split
-
+bindsym $mod+Ctrl+q     split     toggle
+bindsym $mod+Ctrl+e     layout    toggle split
 bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Left  workspace prev
 
 set $ws1 1:home
 set $ws2 2:tmux
 set $ws3 3:browser
 set $ws4 4:docker
+
+assign [class="Chromium"] $ws3
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -64,13 +67,13 @@ bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l       exec --no-startup-id i3exit lock,        mode "default"
+    bindsym s       exec --no-startup-id i3exit suspend,     mode "default"
+    bindsym u       exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e       exec --no-startup-id i3exit logout,      mode "default"
+    bindsym h       exec --no-startup-id i3exit hibernate,   mode "default"
+    bindsym r       exec --no-startup-id i3exit reboot,      mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown,    mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -78,10 +81,10 @@ mode "$mode_system" {
 
 bindsym $mod+r mode "resize"
 mode "resize" {
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
+        bindsym h resize shrink width  5 px or 5 ppt
+        bindsym j resize grow   height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym l resize grow   width  5 px or 5 ppt
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -93,7 +96,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 30 -locker blurlock
-exec --no-startup-id xrandr --output Virtual1 --primary --mode 2560x1600
+exec --no-startup-id xrandr --output Virtual1 --primary --mode 1680x1050
 exec_always --no-startup-id fix_xcursor
 
 set_from_resource $term_background background
@@ -119,15 +122,15 @@ bar {
     i3bar_command i3bar -t
     font pango:DejaVu Sans Mono
     position bottom
-    status_command ~/.i3/i3status-rs ~/.i3/status.toml
+    status_command ~/bin/i3status-rs ~/.i3/status.toml
     colors {
-        separator #666666
+        separator  #666666
         background #0000006f
         statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
+        focused_workspace  #0088CC #0088CC #ffffff
+        active_workspace   #333333 #333333 #ffffff
         inactive_workspace #333333 #333333 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+        urgent_workspace   #2f343a #900000 #ffffff
     }
 }
 
@@ -141,41 +144,7 @@ client.background         2B2C2B
 
 gaps inner 14
 gaps outer -2
-smart_gaps on
+
+smart_gaps    on
 smart_borders on
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
 
