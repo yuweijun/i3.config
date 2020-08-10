@@ -11,7 +11,7 @@ sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
 # sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr rxvt-unicode
 # sudo pacman -S --noconfirm wqy-microhei
 # sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu
-# sudo pacman -S --noconfirm gtkmm3
+# sudo pacman -S --noconfirm open-vm-tools gtkmm gtkmm3
 
 cp ~/.i3/config ~/.3/config.orig
 cp ~/.profile ~/.profile.orig
