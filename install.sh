@@ -1,11 +1,14 @@
 #!/bin/bash
 
 sudo pacman -Syy --noconfirm
+sudo pacman -S --noconfirm gnome-terminal
 sudo pacman -S --noconfirm neovim tmux chromium
 sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
-sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr rxvt-unicode
-sudo pacman -S --noconfirm wqy-microhei gtkmm3
-sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu
+
+# sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr rxvt-unicode
+# sudo pacman -S --noconfirm wqy-microhei
+# sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu
+# sudo pacman -S --noconfirm gtkmm3
 
 cp ~/.profile ~/.profile.orig
 cp ~/.Xresources ~/.Xresources.orig
