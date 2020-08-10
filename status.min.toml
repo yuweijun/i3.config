@@ -1,0 +1,13 @@
+theme = "gruvbox-dark"
+icons = "awesome"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %Y-%m-%d %R"

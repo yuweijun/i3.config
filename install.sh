@@ -15,7 +15,7 @@ cp .Xresources ~/.Xresources
 cp mimeapps.list ~/.config/mimeapps.list
 
 cp config ~/.i3/config
-cp status.toml ~/.i3/status.toml
+cp status.min.toml ~/.i3/status.toml
 cp i3status-rs ~/.i3/i3status-rs
 
 sudo cp mnt.hgfs.service /etc/systemd/system/mnt.hgfs.service
