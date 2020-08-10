@@ -18,6 +18,10 @@ cp ~/.profile ~/.profile.orig
 cp ~/.Xresources ~/.Xresources.orig
 cp  ~/.config/mimeapps.list ~/.config/mimeapps.list.orig
 
+# cp config ~/.i3/config
+# cp status.min.toml ~/.i3/status.toml
+# cp i3status-rs ~/.i3/i3status-rs
+
 # sudo cp mnt.hgfs.service /etc/systemd/system/mnt.hgfs.service
 # sudo systemctl enable mnt.hgfs.service
 
