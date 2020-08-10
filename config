@@ -8,13 +8,13 @@ font xft:URWGothic-Book 11
 hide_edge_borders none
 floating_modifier $mod
 
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+w kill
 
 bindsym $mod+b exec chromium
 bindsym $mod+d exec dmenu_run -b -h 24 -nf '#eeeeee' -nb '#333333' -sf '#ffffff' -sb '#0088CC' -fn 'pango:DejaVu Sans Mono'
 
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+Ctrl+b exec gnome-terminal -e 'bmenu'
 bindsym $mod+Ctrl+m bar  mode     toggle
 
 bindsym $mod+Shift+c reload
