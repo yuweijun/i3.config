@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo pacman-mirrors -ic China -m rank
 sudo pacman -Syy --noconfirm
 sudo pacman -S --noconfirm gnome-terminal
 sudo pacman -S --noconfirm neovim tmux chromium
@@ -24,7 +25,5 @@ sudo cp mnt.hgfs.service /etc/systemd/system/mnt.hgfs.service
 sudo systemctl enable mnt.hgfs.service
 
 xrandr --output Virtual1 --primary --mode 1680x1050
-
-# sudo pacman-mirrors -ic China -m rank
 
 chsh -s /bin/zsh
