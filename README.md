@@ -19,3 +19,10 @@ install i3status-rust from [https://github.com/greshake/i3status-rust/](https://
     cd rxvt-unicode-patched
     makepkg -s
     sudo pacman -U rxvt-unicode-patched-9.19-1-x86_64.pkg.tar.xz
+
+## Google chrome
+
+    git clone https://aur.archlinux.org/google-chrome.git
+    cd google-chrome
+    makepkg -s
+    sudo pacman -U google-chrome*.tar.xz
