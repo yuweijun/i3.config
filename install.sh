@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
 # sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu
 # sudo pacman -S --noconfirm gtkmm3
 
+cp ~/.i3/config ~/.3/config.orig
 cp ~/.profile ~/.profile.orig
 cp ~/.Xresources ~/.Xresources.orig
 cp  ~/.config/mimeapps.list ~/.config/mimeapps.list.orig
