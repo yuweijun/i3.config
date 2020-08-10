@@ -14,8 +14,8 @@ cp ~/.profile ~/.profile.orig
 cp ~/.Xresources ~/.Xresources.orig
 cp  ~/.config/mimeapps.list ~/.config/mimeapps.list.orig
 
-sudo cp mnt.hgfs.service /etc/systemd/system/mnt.hgfs.service
-sudo systemctl enable mnt.hgfs.service
+# sudo cp mnt.hgfs.service /etc/systemd/system/mnt.hgfs.service
+# sudo systemctl enable mnt.hgfs.service
 
 xrandr --output Virtual1 --primary --mode 1680x1050
 
