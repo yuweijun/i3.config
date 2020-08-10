@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo pacman-mirrors -f5
+sudo pacman -Syyu
+
 sudo pacman -Syy --noconfirm
 sudo pacman -S --noconfirm gnome-terminal
 sudo pacman -S --noconfirm neovim tmux chromium
