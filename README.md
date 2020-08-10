@@ -13,7 +13,7 @@ install i3status-rust from [https://github.com/greshake/i3status-rust/](https://
     ./install.sh
     sed -i 's/ens33/enp0s3/' ~/.i3/status.toml
 
-## xvt-unicode-patched installation
+## rxvt-unicode-patched installation
 
     git clone https://aur.archlinux.org/rxvt-unicode-patched.git
     cd rxvt-unicode-patched
