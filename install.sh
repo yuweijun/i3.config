@@ -7,6 +7,7 @@ sudo pacman -S --noconfirm neovim tmux chromium
 sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
 sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr
 sudo pacman -S --noconfirm wqy-microhei
+sudo pacman -S --noconfirm xclip
 sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu i3status-manjaro
 
 sudo pacman -S --noconfirm open-vm-tools
