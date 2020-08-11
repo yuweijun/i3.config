@@ -3,7 +3,7 @@
 sudo pacman-mirrors -ic China -m rank
 sudo pacman -Syy --noconfirm
 sudo pacman -S --noconfirm termite
-sudo pacman -S --noconfirm neovim tmux chromium
+sudo pacman -S --noconfirm neovim tmux
 sudo pacman -S --noconfirm zsh zsh-autosuggestions zsh-syntax-highlighting
 sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr
 sudo pacman -S --noconfirm wqy-microhei
