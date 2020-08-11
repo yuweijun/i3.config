@@ -26,3 +26,9 @@ install i3status-rust from [https://github.com/greshake/i3status-rust/](https://
     cd google-chrome
     makepkg -s
     sudo pacman -U google-chrome*.tar.xz
+
+## copy/paste between host and vm
+
+    # open-vm-tools-desktop
+    pacman -S open-vm-tools
+    vmware-user-suid-wrapper
