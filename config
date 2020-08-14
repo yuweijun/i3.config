@@ -12,7 +12,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+w kill
 
 bindsym $mod+b exec google-chrome-stable
-bindsym $mod+d exec dmenu_run -b -h 24 -nf '#eeeeee' -nb '#333333' -sf '#ffffff' -sb '#0088CC' -fn 'pango:DejaVu Sans Mono'
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme lb
 
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+Ctrl+m bar mode toggle
