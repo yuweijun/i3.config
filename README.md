@@ -34,3 +34,11 @@ install i3status-rust from [https://github.com/greshake/i3status-rust/](https://
     # open-vm-tools-desktop
     pacman -S open-vm-tools
     vmware-user-suid-wrapper
+
+## picom start failure issue
+
+    > "paint-on-overlay" has been removed as an option
+
+Delete the original ~/.config/compton.conf
+
+
