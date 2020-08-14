@@ -9,6 +9,7 @@ sudo pacman -S --noconfirm xorg-xrdb xorg-xrandr
 sudo pacman -S --noconfirm wqy-microhei
 sudo pacman -S --noconfirm xclip
 sudo pacman -S --noconfirm i3-gaps picom conky ttf-dejavu i3status-manjaro
+sudo pacman -S ttf-font-awesome
 
 sudo pacman -S --noconfirm open-vm-tools
 # sudo pacman -S --noconfirm gtkmm gtkmm3
